@@ -229,10 +229,13 @@ static int lowmem_shrink(struct shrinker *s, struct shrink_control *sc)
 #ifdef ENHANCED_LMK_ROUTINE
 		int is_exist_oom_task = 0;
 #endif
+		if (tsk->flags & PF_KTHREAD)
+			continue;
+
 		p = find_lock_task_mm(tsk);
 		if (!p)
 			continue;
-		
+
 		oom_adj = p->signal->oom_adj;
 		if (oom_adj < min_adj) {
 			task_unlock(p);
