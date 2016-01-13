@@ -42,7 +42,6 @@
 #include <linux/swap.h>
 #include <linux/compaction.h>
 #ifdef CONFIG_ZRAM_FOR_ANDROID
-#include <linux/swap.h>
 #include <linux/device.h>
 #include <linux/err.h>
 #include <linux/mm_inline.h>
