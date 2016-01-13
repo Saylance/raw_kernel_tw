@@ -725,6 +725,7 @@ const char * const vmstat_text[] = {
 	"numa_other",
 #endif
 	"nr_anon_transparent_hugepages",
+	"nr_swapcache",
 #ifdef CONFIG_DMA_CMA
 	"nr_free_cma",
 #endif
